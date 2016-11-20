@@ -2,8 +2,7 @@ language: c
 
 os:
   - linux
-  - osx
-  
+ 
 script:
   - aclocal
   - autoconf
@@ -12,3 +11,12 @@ script:
   - ./configure
   - make
   - make test
+
+deploy:
+  provider: releases
+  api_key:
+    secure: LO95Ox5JPs8CUMLjrhoOH+CbACcAZ4tGBg7CxBmH+K81rYBg+Mt4rDJSLrpofzaxb9NgdN7Qyx+rG4AgGwb7o8soFz67EJ3KqQGn6TtnhDuLvcBisDkgxcF4CcKXNRuZToWF81t6E/SvXyrZtp1u8PMDV4hK4IvvVazvOM41sP5oGKlYYZP9hQAHPmuxM8jte65P2lN7NYFfmczo6ajuppfzD1zhBlMSKumTNCYc4n5BIiLvfczGoqrh6pKGmOYkPTFKyvgrAuHA67hpPI7lp81SlEI40rOxcKEhmCO5vj+sGB9W2CvMZqIA0nbh9PMR3GIq+nyMNWhXusJq43UaIEwZHC/rZzVYMJ9GQFCmbXuqqbKzaAFXasdKqbW8Lqy1lYF6g4PGTYxvg/cfyOv2JtIQTmyvPXz4wcqnbk3xQNrZPgFIizoTmXi3t/P421uVHxrsyrsmmeRMP+Tc559sDBz0TI/bZo1BOxQfbBl5iJLAySTP0tJSwolCmNfhKRyXHfaoRMKmAS3RTnJqpNoNv3RWi6tX5NiNZhTCQfQuG99D78SAakkEIMGL9M1fptEnzOVJHrTwl9CAryFI3SOPbehVL7E60rkquAC6oPnsrjIedrfe9KYpiuOPsHyOwc3mXGwvVkJ6/3OFu2RlEvAy0pi6p1w9l8gK9tNF7y+g9kI=
+  file: roll
+  on:
+    tags: true
+
