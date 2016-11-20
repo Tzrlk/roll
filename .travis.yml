@@ -12,6 +12,9 @@ script:
   - make
   - make test
 
+after_script:
+  - git status
+
 deploy:
   provider: releases
   api_key:
